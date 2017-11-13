@@ -39,7 +39,20 @@ button
     &:hover
       filter: invert(.3)
 
+    +r($desktop)
+      font-size: 22px
+      min-size: 280px 70px
+    +r($tablet)
+      font-size: 20px
+      min-size: 250px 60px
+    +r($mobile)
+      font: 16px
+      min-size: 210px 55px
+
+
     &.btn-smaller
       min-size: 165px 48px
       text-transform: none
       font-size: 20px
+      +r($desktop)
+        min-size: 165px 48px

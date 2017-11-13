@@ -7,7 +7,7 @@ block content
   
   // HERO :: START
   .hero
-    img.section-bg(src="img/el/heroBg.jpg")
+    img.section-bg.section-bg--visible-mobile(src="img/el/heroBg.jpg")
     .container
       .hero__wrapper
         i.icon.icon-man_logo.wow(data-animation-delay=".1s")
@@ -22,6 +22,7 @@ block content
   // INSTA :: START
   a(href="#" target="_blank").insta
     img.section-bg(src='img/el/instaBg.png' srcset='img/el/instaBg@2x.png 2x')
+    img.section-bg-mobile(src='img/el/mobileInsta.jpg' srcset='img/el/mobileInsta@2x.jpg 2x')
     .container
       .insta__wrapper
         .insta__title.wow(data-animation-delay="2s") Присоединяйтесь к нам в Instagram
@@ -83,7 +84,7 @@ block content
           .delivery__cta-letters.wow(data-animation-delay=".3s" data-animation-class="wowFadeLeft")
             img(src='img/el/deliveryCtaLetters.png' srcset='img/el/deliveryCtaLetters@2x.png 2x')
           
-          a(href='tel:428062').delivery__cta-phone
+          a(href='tel:+73532428062').delivery__cta-phone
             img(src='img/el/deliveryCtaPhone.png' srcset='img/el/deliveryCtaPhone@2x.png 2x').wow(data-animation-delay=".6s" data-animation-class="wowFadeRight")
   
   // MENU :: START
@@ -130,7 +131,7 @@ block content
           .contact__credentials.wow(data-animation-delay=".4s")
             .contact__adress Оренбург, <br> ул. 9 Января, 28
             a(href="mailto:orenburg@choppers.cafe").contact__email orenburg@choppers.cafe
-            a(href="tel:42-80-62").contact__phone 42-80-62
+            a(href="tel:+73532428062").contact__phone 42-80-62
           .contact__map.wow(data-animation-delay="1s")
             #map
       

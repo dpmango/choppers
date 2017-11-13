@@ -9,7 +9,16 @@
   min-height: 100%
   width: auto
   height: auto
+  +r($mobile)
+    display: none
+    &--visible-mobile
+      display: block
 
+.section-bg-mobile
+  display: none
+  width: 100%
+  +r($mobile)
+    display: block
 
 .hero
   position: relative
@@ -27,12 +36,30 @@
     text-align: center
     color: white
     padding: 50px 0
+    +r($tablet)
+      .icon-man_logo
+        margin-top: auto
+
+    +r($mobile)
+      padding-top: 120px
+      .icon-man_logo
+        margin-top: 0
+
 
   &__title
     margin-top: 30px
     font-size: 55px
     font-weight: 700
     line-height: 1.1
+    +r($desktop)
+      margin-top: 25px
+      font-size: 48px
+
+    +r($tablet)
+      font-size: 40px
+
+    +r($mobile)
+      font-size: 30px
 
   &__cta
     margin-top: 60px
@@ -42,6 +69,18 @@
       margin-right: 40px
       &:last-child
         margin-right: 0
+    +r($desktop)
+      margin-top: 40px
+
+    +r($tablet)
+      margin-top: auto
+      .btn
+        margin-right: 30px
+    +r($mobile-s)
+      flex-direction: column
+      .btn
+        margin-right: 0
+        margin-bottom: 25px
 
 
 
@@ -68,17 +107,29 @@
     align-items: center
     justify-content: center
     padding: 24px 0
+    +r($desktop)
+      padding: 15px 0
+      flex-direction: column
+    +r($mobile)
+      display: none
+      // image replace
+
   &__title
     font-size: 24px
     font-weight: 800
     margin-right: 15px
     color: #5b6b8e
     transition: color $transitionSpeed $ease
+    +r($desktop)
+      margin-right: 0
+      margin-bottom: 15px
   &__social
     display: flex
     align-items: center
     .icon
       flex: 0 0 auto
+      +r($desktop)
+        transform: scale(.8)
 
     span
       font-size: 28px
@@ -87,6 +138,8 @@
       display: inline-block
       margin-left: 10px
       transition: all $transitionSpeed $ease
+      +r($desktop)
+        font-size: 24px
 
   &:hover
     .insta
@@ -101,6 +154,8 @@
 .insta-feed
   display: flex
   flex-wrap: wrap
+  +r($mobile)
+    flex-direction: column
   &__pic
     position: relative
     z-index: 1
@@ -110,6 +165,24 @@
     min-height: 220px
     width: 100%
     cursor: pointer
+    +r($xl)
+      min-height: 210px
+    +r($desktop)
+      min-height: 170px
+    +r($tablet)
+      flex: 0 1 50%
+      &:nth-child(n+7)
+        display: none
+    +r($mobile)
+      min-height: 250px
+      flex: 0 0 auto
+      &:nth-child(n+4)
+        display: none
+    +r($mobile-s)
+      min-height: 210px
+    +r($mobile-ss)
+      min-height: 175px
+
     img
       position: absolute
       top: 50%
