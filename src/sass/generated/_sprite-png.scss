@@ -1,11 +1,65 @@
 $sprite: (
-	logo: (
+	arrow: (
+		offset-x: -255px,
+		offset-y: -195px,
+		width: 74px,
+		height: 47px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	callcentre: (
 		offset-x: 0px,
 		offset-y: 0px,
-		width: 300px,
-		height: 70px,
-		total-width: 300px,
-		total-height: 70px,
+		width: 245px,
+		height: 299px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	dostavka: (
+		offset-x: 0px,
+		offset-y: -309px,
+		width: 260px,
+		height: 230px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	insta-logo: (
+		offset-x: -482px,
+		offset-y: -373px,
+		width: 51px,
+		height: 51px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	man_logo: (
+		offset-x: -270px,
+		offset-y: -309px,
+		width: 202px,
+		height: 228px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	slick-arrow: (
+		offset-x: -482px,
+		offset-y: -309px,
+		width: 54px,
+		height: 54px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	wallet: (
+		offset-x: -255px,
+		offset-y: 0px,
+		width: 329px,
+		height: 185px,
+		total-width: 584px,
+		total-height: 539px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +118,24 @@ $sprite: (
 
 
 
-	.icon-logo {
-		@include sprite(logo)
+	.icon-arrow {
+		@include sprite(arrow)
+	}
+	.icon-callcentre {
+		@include sprite(callcentre)
+	}
+	.icon-dostavka {
+		@include sprite(dostavka)
+	}
+	.icon-insta-logo {
+		@include sprite(insta-logo)
+	}
+	.icon-man_logo {
+		@include sprite(man_logo)
+	}
+	.icon-slick-arrow {
+		@include sprite(slick-arrow)
+	}
+	.icon-wallet {
+		@include sprite(wallet)
 	}

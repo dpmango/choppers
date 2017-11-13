@@ -33,7 +33,7 @@ html.mfp-helper
     transform: scale(0.8)
     opacity: 0
   &.mfp-bg
-    background: $colorGreen
+    background: rgba(black, .6)
     opacity: 0
     transition: opacity 0.3s $ease
   &.mfp-ready.mfp-bg
@@ -62,3 +62,40 @@ html.mfp-helper
     opacity: 0.8
   &.mfp-removing.mfp-bg
     opacity: 0
+
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img
+  padding: 0
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after
+  top: 0
+  bottom: 0
+
+/* padding for main container */
+.mfp-no-margins .mfp-container
+  padding: 0
+
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg
+  opacity: 0
+  transition: all 0.3s ease-out
+
+.mfp-with-zoom .mfp-container
+  transform: translate3d(0,50%,0)
+
+.mfp-with-zoom.mfp-ready .mfp-container
+  opacity: 1
+  transform: translate3d(0,0%,0)
+
+.mfp-with-zoom.mfp-ready.mfp-bg
+  opacity: 0.8
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg
+  opacity: 0
+
+.mfp-with-zoom.mfp-removing .mfp-container
+  transform: translate3d(0,-50%,0)

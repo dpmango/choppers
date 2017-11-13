@@ -1,4 +1,33 @@
 // FOOTER
 .footer
+  position: relative
+  z-index: 1
+  overflow: hidden
   &__wrapper
-    
+    display: flex
+    align-items: center
+    min-height: 100px
+    position: relative
+    z-index: 2
+    color: #919191
+  &__copy
+    font-size: 20px
+  &__developer
+    font-size: 20px
+    margin-left: auto
+    a
+      display: inline-block
+      position: relative
+      &::after
+        display: inline-block
+        content: ''
+        position: absolute
+        bottom: -1px
+        height: 1px
+        left: 0
+        right: 0
+        background: currentColor
+        transition: all $transitionSpeed $ease
+      &:hover::after
+        left: 50%
+        right: 50%

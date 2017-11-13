@@ -5,11 +5,132 @@ bodyClass: homepage
 extends shared/_layout
 block content
   
+  // HERO :: START
   .hero
-    img.hero__bg(src="img/heroBg.jpg")
+    img.section-bg(src="img/el/heroBg.jpg")
     .container
-      
       .hero__wrapper
+        i.icon.icon-man_logo.wow(data-animation-delay=".1s")
+        .hero__title.wow(data-animation-delay=".5s") Мы готовим <br> самые вкусные бургеры <br> в Оренбурге
         
-        .hero__title Мы готовим <br> самые вкусные бургеры <br> в Оренбурге
+        .hero__cta
+          a(href="#sectionMenu").btn.btn-primary.wow(data-animation-delay="1s")
+            span Меню
+          a(href="#sectionDelivery").btn.btn-primary.wow(data-animation-delay="1.25s")
+            span Доставка
+
+  // INSTA :: START
+  a(href="#" target="_blank").insta
+    img.section-bg(src='img/el/instaBg.png' srcset='img/el/instaBg@2x.png 2x')
+    .container
+      .insta__wrapper
+        .insta__title.wow(data-animation-delay="2s") Присоединяйтесь к нам в Instagram
+        .insta__social.wow(data-animation-delay="2.25s")
+          i.icon.icon-insta-logo
+          span choppersorenburg
+  
+  .insta-feed(js-popup-gallery)
+    .insta-feed__pic(href="img/burg_1@2x.jpg").wow(data-animation-delay=".1s")
+      img(src='img/burg_1.jpg' srcset='img/burg_1@2x.jpg 2x')
+    .insta-feed__pic(href="img/burg_2@2x.jpg").wow(data-animation-delay=".2s")
+      img(src='img/burg_2.jpg' srcset='img/burg_2@2x.jpg 2x')
+    .insta-feed__pic(href="img/burg_3@2x.jpg").wow(data-animation-delay=".3s")
+      img(src='img/burg_3.jpg' srcset='img/burg_3@2x.jpg 2x')
         
+    .insta-feed__pic(href="img/burg_4@2x.jpg").wow(data-animation-delay=".1s")
+      img(src='img/burg_4.jpg' srcset='img/burg_4@2x.jpg 2x')
+    .insta-feed__pic(href="img/burg_5@2x.jpg").wow(data-animation-delay=".2s")
+      img(src='img/burg_5.jpg' srcset='img/burg_5@2x.jpg 2x')
+    .insta-feed__pic(href="img/burg_6@2x.jpg").wow(data-animation-delay=".3s")
+      img(src='img/burg_6.jpg' srcset='img/burg_6@2x.jpg 2x')
+        
+    .insta-feed__pic(href="img/burg_7@2x.jpg").wow(data-animation-delay=".1s")
+      img(src='img/burg_7.jpg' srcset='img/burg_7@2x.jpg 2x')
+    .insta-feed__pic(href="img/burg_8@2x.jpg").wow(data-animation-delay=".2s")
+      img(src='img/burg_8.jpg' srcset='img/burg_8@2x.jpg 2x')
+    .insta-feed__pic(href="img/burg_9@2x.jpg").wow(data-animation-delay=".3s")
+      img(src='img/burg_9.jpg' srcset='img/burg_9@2x.jpg 2x')
+        
+  
+  // DELIVERY :: START
+  .delivery#sectionDelivery
+    img.section-bg(src='img/el/deliveryBg.jpg' srcset='img/el/deliveryBg.jpg 2x')
+    .container
+      .delivery__wrapper
+        // title
+        .title.wow
+          .title__wrapper
+            span Доставка
+        
+        .delivery__row
+          .delivery__el.wow(data-animation-delay=".2s")
+            .delivery__icon
+              i.icon.icon-callcentre
+            .delivery__text Принимаем заказы <br> с 11 до 22:30 <br> каждый день
+          
+          .delivery__el.wow(data-animation-delay=".4s")
+            .delivery__icon
+              i.icon.icon-dostavka
+            .delivery__text Доставляем в течении <br> часа по городу бесплатно <br> от 1000 рублей*
+
+          .delivery__el.wow(data-animation-delay=".6s")
+            .delivery__icon
+              i.icon.icon-wallet
+            .delivery__text Принимаем оплату <br> наличными и <br> банковской картой
+            
+        
+        .delivery__cta
+          .delivery__cta-letters.wow(data-animation-delay=".3s" data-animation-class="wowFadeLeft")
+            img(src='img/el/deliveryCtaLetters.png' srcset='img/el/deliveryCtaLetters@2x.png 2x')
+          
+          a(href='tel:428062').delivery__cta-phone
+            img(src='img/el/deliveryCtaPhone.png' srcset='img/el/deliveryCtaPhone@2x.png 2x').wow(data-animation-delay=".6s" data-animation-class="wowFadeRight")
+  
+  // MENU :: START
+  .menu#sectionMenu
+    img.section-bg(src='img/el/menuBg.jpg' srcset='img/el/menuBg@2x.jpg 2x')
+    .container
+      .menu__wrapper
+        .menu__slider
+          a(href='img/menu1.pdf' target="_blank").menu__slide
+            img(src='img/menu1.jpg' srcset='img/menu1@2x.jpg 2x')
+          a(href='img/menu2.pdf' target="_blank").menu__slide
+            img(src='img/menu2.jpg' srcset='img/menu2@2x.jpg 2x')
+              
+  
+  // INTERIOR :: START
+  .interior
+    img.section-bg(src='img/el/interiorBg.jpg' srcset='img/el/interiorBg@2x.jpg 2x')
+    .container
+      .interior__wrapper
+        // title
+        .title.wow(data-animation-delay=".2s")
+          .title__wrapper
+            span Интерьер
+            
+        .interior__slider
+          .interior__slide
+            img(src='img/interiorImg_1.jpg')
+          .interior__slide
+            img(src='img/interiorImg_2.jpg')
+          .interior__slide
+            img(src='img/interiorImg_3.jpg')
+              
+  // CONTACT :: START
+  .contact
+    img.section-bg(src='img/el/contactBg.jpg' srcset='img/el/contactBg@2x.jpg 2x')
+    .container
+      .contact__wrapper
+        // title
+        .title.title--black.wow(data-animation-delay=".2s")
+          .title__wrapper
+            span Контакты
+        
+        .contact__info
+          .contact__credentials.wow(data-animation-delay=".4s")
+            .contact__adress Оренбург, <br> ул. 9 Января, 28
+            a(href="mailto:orenburg@choppers.cafe").contact__email orenburg@choppers.cafe
+            a(href="tel:42-80-62").contact__phone 42-80-62
+          .contact__map.wow(data-animation-delay="1s")
+            #map
+      
