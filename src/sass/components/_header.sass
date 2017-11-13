@@ -5,6 +5,9 @@
   left: 0
   right: 0
   z-index: 10
+  &--inner
+    position: static
+    padding: 25px 0
   &__wrapper
     display: flex
     align-items: center
@@ -12,3 +15,14 @@
   &__logo
     font-size: 60px
     color: white
+
+  &__menu
+    padding-left: 12.5%
+    flex: 1 1 auto
+    display: flex
+    align-items: center
+    color: white
+    .btn
+      margin-right: auto
+      &:last-child
+        margin-right: 0
