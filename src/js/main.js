@@ -124,8 +124,8 @@ $(document).ready(function(){
 
   // HAMBURGER TOGGLER
   $('.hamburger').on('click', function(){
-    $('.hamburger').toggleClass('active');
-    $('.mobile-navi').toggleClass('active');
+    $('.hamburger').toggleClass('is-active');
+    $('.mobile-navi').toggleClass('is-active');
   });
 
   // SET ACTIVE CLASS IN HEADER

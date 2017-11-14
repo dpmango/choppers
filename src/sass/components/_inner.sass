@@ -3,10 +3,12 @@
   background: url('../img/el/innerBg.jpg') no-repeat center
   background-size: cover
   // background-position: fixed
+  +r($tablet)
+    background: white
+
+
 .text-page
   position: relative
-  > .container
-    background: white
 
   &__title
     position: relative
@@ -27,8 +29,14 @@
       padding-top: 3px
       border-color: currentColor
 
+  &__container
+    background: white
+
   &__wrapper
-    padding: 30px 0
+    padding: 30px 40px
+    max-width: 1440px
+    margin-left: auto
+    margin-right: auto
 
     img
       padding-right: 25px
@@ -67,3 +75,44 @@
           size: 8px
           border: 2.5px solid currentColor
           border-radius: 50%
+
++r($wide)
+  .text-page
+    &__title
+      span
+        font-size: 50px
+
+
++r($desktop)
+  .text-page
+    > .container
+      padding-left: 0 !important
+      padding-right: 0 !important
+
++r($mobile)
+  .text-page
+    &__wrapper
+      padding: 20px 30px
+      h1, h2, h3, h4
+        padding-left: 0
+      img
+        float: none !important
+        margin-left: -30px
+        margin-right: -30px
+        width: calc(100% + 90px) !important
+        max-width: 200% !important
+
+    &__title
+      span
+        font-size: 30px
+      &::after
+        border-top: 1px solid transparent
+        border-bottom: 1px solid transparent
+        padding-top: 2px
+        border-color: currentColor
+        margin-right: -40px
+
++r($mobile-ss)
+  .text-page
+    &__wrapper
+      padding: 20px 20px
