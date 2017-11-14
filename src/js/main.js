@@ -18,8 +18,10 @@ $(document).ready(function(){
   // detect mobile devices
   function isMobile(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $('body').addClass('is-mobile')
       return true
     } else {
+      $('body').removeClass('is-mobile')
       return false
     }
   }
@@ -48,12 +50,12 @@ $(document).ready(function(){
   svg4everybody();
 
   // Viewport units buggyfill
-  window.viewportUnitsBuggyfill.init({
-    force: true,
-    hacks: window.viewportUnitsBuggyfillHacks,
-    refreshDebounceWait: 250,
-    appendToBody: true
-  });
+  // window.viewportUnitsBuggyfill.init({
+  //   force: true,
+  //   hacks: window.viewportUnitsBuggyfillHacks,
+  //   refreshDebounceWait: 250,
+  //   appendToBody: true
+  // });
 
 
  	// Prevent # behavior
@@ -237,7 +239,7 @@ $(document).ready(function(){
     setTimeout(function(){
 
       // require
-      if ( !monitorActive ){
+      if ( !monitorActive && !_mobileDevice ){
         monitorActive = true;
         $('.wow').each(function(i, el){
 
