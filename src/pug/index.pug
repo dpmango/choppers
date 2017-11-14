@@ -105,10 +105,16 @@ block content
       .menu__wrapper
         .menu__slider.wow(data-animation-delay=".2s")
           a(href='img/menu.merged.compressed.pdf' target="_blank").menu__slide
-            img(src='img/menu1.jpg' srcset='img/menu1@2x.jpg 2x')
+            picture
+              source(media="(min-width: 768px)" srcset="img/menu1.jpg 1x, img/menu1@2x.jpg 2x")
+              source(media="(max-width: 768px)" srcset="img/menu1Mobile.jpg")
+              img(src="img/menu1.jpg")
+                
           a(href='img/menu.merged.compressed.pdf' target="_blank").menu__slide
-            img(src='img/menu2.jpg' srcset='img/menu2@2x.jpg 2x')
-              
+            picture
+              source(media="(min-width: 768px)" srcset="img/menu2.jpg 1x, img/menu2@2x.jpg 2x")
+              source(media="(max-width: 768px)" srcset="img/menu2Mobile.jpg")
+              img(src="img/menu2.jpg")
   
   // INTERIOR :: START
   .interior#sectionInterior
