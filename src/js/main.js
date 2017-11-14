@@ -159,7 +159,15 @@ $(document).ready(function(){
     speed: 300,
     vertical: false,
     fade: true,
-    slidesToShow: 1
+    slidesToShow: 1,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        fade: false,
+      }
+    }
+    ]
   });
 
   $('.interior__slider').slick({
