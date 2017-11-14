@@ -1,0 +1,119 @@
+
+.menu
+  position: relative
+  z-index: 1
+  overflow: hidden
+  &__wrapper
+    position: relative
+    z-index: 2
+    padding: 80px 0
+
+  &__slider
+    position: relative
+    .slick-arrow
+      position: absolute
+      z-index: 5
+      top: 50%
+      transform: translateY(-50%)
+      background: transparent
+      -webkit-apperance: none
+      font-size: 0
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &::after
+        display: inline-block
+        content: ' '
+        +sprite(slick-arrow)
+      &:hover
+        filter: invert(.2)
+        transform: translateY(-50%) scale(1.05)
+
+    .slick-next
+      right: -130px
+      transform: translateY(-50%) rotate(180deg)
+      &:hover
+        transform: translateY(-50%) rotate(180deg) scale(1.05)
+
+    .slick-prev
+      left: -130px
+
+  &__slide
+    // background: white
+    padding: 20px 20px 30px 20px
+    img
+      width: 100%
+      box-shadow: 0px 5px 30px rgba(black, .5)
+      transition: all $transitionSpeed ease-out
+
+      &:hover
+        transform: scale(1.02)
+        box-shadow: none
+
++r(1800)
+  .menu
+    &__slider
+      padding: 20px 40px
+
+      .slick-next
+        right: -35px
+      .slick-prev
+        left: -35px
+
++r($wide)
+  .menu
+    &__wrapper
+      padding: 45px 0
+
++r($tablet)
+  .menu
+    &__wrapper
+      padding: 0
+
+    &__slider
+      padding: 0
+      margin-left: -40px
+      margin-right: -40px
+      .slick-arrow
+        top: auto
+        bottom: 0
+        transform: none !important
+        &::after
+          +sprite(slick-fold-arrow)
+          z-index: 2
+        &::before
+          display: inline-block
+          content: ''
+          z-index: -1
+          position: absolute
+          bottom: -3px
+          right: 0
+          size: 40px
+          background: white
+        &:hover
+          filter: none
+
+      .slick-next
+        right: -5px
+      .slick-prev
+        display: none
+        opacity: 0
+
+
+    &__slide
+      padding: 0
+      img
+        box-shadow: none
+      img:hover
+        transform: none
+
++r($mobile)
+  .menu
+    &__slider
+      margin-left: -30px
+      margin-right: -30px
+
++r($mobile-ss)
+  .menu
+    &__slider
+      margin-left: -20px
+      margin-right: -20px

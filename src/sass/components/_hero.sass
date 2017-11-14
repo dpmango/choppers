@@ -1,0 +1,61 @@
+.hero
+  position: relative
+  z-index: 1
+  overflow: hidden
+
+  &__wrapper
+    position: relative
+    z-index: 2
+    min-height: calc(100vh - 100px)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    color: white
+    padding: 50px 0
+    +r($tablet)
+      .icon-man_logo
+        margin-top: auto
+
+    +r($mobile)
+      padding-top: 120px
+      .icon-man_logo
+        margin-top: 0
+
+
+  &__title
+    margin-top: 30px
+    font-size: 55px
+    font-weight: 700
+    line-height: 1.1
+    +r($desktop)
+      margin-top: 25px
+      font-size: 48px
+
+    +r($tablet)
+      font-size: 40px
+
+    +r($mobile)
+      font-size: 30px
+
+  &__cta
+    margin-top: 60px
+    display: flex
+    justify-content: center
+    .btn
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+    +r($desktop)
+      margin-top: 40px
+
+    +r($tablet)
+      margin-top: auto
+      .btn
+        margin-right: 30px
+    +r($mobile-s)
+      flex-direction: column
+      .btn
+        margin-right: 0
+        margin-bottom: 25px
