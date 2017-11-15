@@ -234,65 +234,65 @@ $(document).ready(function(){
   ////////////
   // SCROLLMONITOR
   ////////////
-  // var monitorActive = false;
-  // window.runScrollMonitor = function(){
-  //   setTimeout(function(){
-  //
-  //     // require
-  //     if ( !monitorActive && !_mobileDevice ){
-  //       monitorActive = true;
-  //       $('.wow').each(function(i, el){
-  //
-  //         var elWatcher = scrollMonitor.create( $(el) );
-  //
-  //         var delay;
-  //         if ( $(window).width() < 768 ){
-  //           delay = 0
-  //         } else {
-  //           delay = $(el).data('animation-delay');
-  //         }
-  //
-  //         var animationClass
-  //
-  //         if ( $(el).data('animation-class') ){
-  //           animationClass = $(el).data('animation-class');
-  //         } else {
-  //           animationClass = "wowFadeUp"
-  //         }
-  //
-  //         var animationName
-  //
-  //         if ( $(el).data('animation-name') ){
-  //           animationName = $(el).data('animation-name');
-  //         } else {
-  //           animationName = "wowFade"
-  //         }
-  //
-  //         elWatcher.enterViewport(throttle(function() {
-  //           $(el).addClass(animationClass);
-  //           $(el).css({
-  //             'animation-name': animationName,
-  //             'animation-delay': delay,
-  //             'visibility': 'visible'
-  //           });
-  //         }, 100, {
-  //           'leading': true
-  //         }));
-  //         elWatcher.exitViewport(throttle(function() {
-  //           $(el).removeClass(animationClass);
-  //           $(el).css({
-  //             'animation-name': 'none',
-  //             'animation-delay': 0,
-  //             'visibility': 'hidden'
-  //           });
-  //         }, 100));
-  //       });
-  //     }
-  //
-  //   },300);
-  // }
-  //
-  // runScrollMonitor();
+  var monitorActive = false;
+  window.runScrollMonitor = function(){
+    setTimeout(function(){
+
+      // require
+      if ( !monitorActive && !_mobileDevice ){
+        monitorActive = true;
+        $('.wow').each(function(i, el){
+
+          var elWatcher = scrollMonitor.create( $(el) );
+
+          var delay;
+          if ( $(window).width() < 768 ){
+            delay = 0
+          } else {
+            delay = $(el).data('animation-delay');
+          }
+
+          var animationClass
+
+          if ( $(el).data('animation-class') ){
+            animationClass = $(el).data('animation-class');
+          } else {
+            animationClass = "wowFadeUp"
+          }
+
+          var animationName
+
+          if ( $(el).data('animation-name') ){
+            animationName = $(el).data('animation-name');
+          } else {
+            animationName = "wowFade"
+          }
+
+          elWatcher.enterViewport(throttle(function() {
+            $(el).addClass(animationClass);
+            $(el).css({
+              'animation-name': animationName,
+              'animation-delay': delay,
+              'visibility': 'visible'
+            });
+          }, 100, {
+            'leading': true
+          }));
+          elWatcher.exitViewport(throttle(function() {
+            $(el).removeClass(animationClass);
+            $(el).css({
+              'animation-name': 'none',
+              'animation-delay': 0,
+              'visibility': 'hidden'
+            });
+          }, 100));
+        });
+      }
+
+    },300);
+  }
+
+  runScrollMonitor();
 
 });
 

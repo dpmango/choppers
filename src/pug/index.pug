@@ -13,8 +13,8 @@ block content
       img.section-bg(src="img/el/heroBg.jpg")
     .container
       .hero__wrapper
-        i.icon.icon-man_logo.wow(data-animation-delay=".1s")
-        .hero__title.wow(data-animation-delay=".5s") Мы готовим <br> самые вкусные бургеры <br> в Оренбурге
+        i.icon.icon-man_logo(data-animation-delay=".1s")
+        .hero__title(data-animation-delay=".5s") Мы готовим <br> самые вкусные бургеры <br> в Оренбурге
         
         .hero__cta
           a(href="#sectionMenu").btn.btn-primary.wow(data-animation-delay="1s")
@@ -28,8 +28,8 @@ block content
     img.mobile-image(src='img/el/mobileInsta.jpg' srcset='img/el/mobileInsta@2x.jpg 2x')
     .container
       .insta__wrapper
-        .insta__title.wow(data-animation-delay="2s") Присоединяйтесь к нам в Instagram
-        .insta__social.wow(data-animation-delay="2.25s")
+        .insta__title(data-animation-delay="2s") Присоединяйтесь к нам в Instagram
+        .insta__social(data-animation-delay="2.25s")
           i.icon.icon-insta-logo
           span choppersorenburg
   
@@ -65,28 +65,28 @@ block content
     .container
       .delivery__wrapper
         // title
-        .title.wow
+        .title
           .title__wrapper
             span Доставка
         
         //- .delivery__row
-        //-   .delivery__el.wow(data-animation-delay=".2s")
+        //-   .delivery__el(data-animation-delay=".2s")
         //-     .delivery__icon
         //-       i.icon.icon-callcentre
         //-     .delivery__text Принимаем заказы <br> с 11 до 22:30 <br> каждый день
         //- 
-        //-   .delivery__el.wow(data-animation-delay=".4s")
+        //-   .delivery__el(data-animation-delay=".4s")
         //-     .delivery__icon
         //-       i.icon.icon-dostavka
         //-     .delivery__text Доставляем в течении <br> часа по городу бесплатно <br> от 1000 рублей*
         //- 
-        //-   .delivery__el.wow(data-animation-delay=".6s")
+        //-   .delivery__el(data-animation-delay=".6s")
         //-     .delivery__icon
         //-       i.icon.icon-wallet
         //-     .delivery__text Принимаем оплату <br> наличными и <br> банковской картой
         //- 
-        img.delivery__placeholder.wow(src='img/el/deliveryContent.png', srcset="img/el/deliveryContent@2x.png 2x")
-        img.delivery__row-mobile.wow(src="img/el/deliveryMobileContent.png" srcset="img/el/deliveryMobileContent@2x.png 2x")
+        img.delivery__placeholder(src='img/el/deliveryContent.png', srcset="img/el/deliveryContent@2x.png 2x")
+        img.delivery__row-mobile(src="img/el/deliveryMobileContent.png" srcset="img/el/deliveryMobileContent@2x.png 2x")
         
         .delivery__cta
           .delivery__cta-letters.wow(data-animation-delay=".3s" data-animation-class="wowFadeLeft")
@@ -103,16 +103,16 @@ block content
     img.section-bg.section-bg--h-tablet(src='img/el/menuBg.jpg' srcset='img/el/menuBg@2x.jpg 2x')
     .container
       .menu__wrapper
-        .menu__slider.wow(data-animation-delay=".2s")
+        .menu__slider(data-animation-delay=".2s")
           a(href='img/menu.merged.compressed.pdf' target="_blank").menu__slide
             picture
-              source(media="(min-width: 768px)" srcset="img/menu1.jpg 1x, img/menu1@2x.jpg 2x")
+              // source(media="(min-width: 768px)" srcset="img/menu1.jpg 1x, img/menu1@2x.jpg 2x")
               source(media="(max-width: 768px)" srcset="img/menu1Mobile.jpg")
               img(src="img/menu1.jpg")
                 
           a(href='img/menu.merged.compressed.pdf' target="_blank").menu__slide
             picture
-              source(media="(min-width: 768px)" srcset="img/menu2.jpg 1x, img/menu2@2x.jpg 2x")
+              // source(media="(min-width: 768px)" srcset="img/menu2.jpg 1x, img/menu2@2x.jpg 2x")
               source(media="(max-width: 768px)" srcset="img/menu2Mobile.jpg")
               img(src="img/menu2.jpg")
   
@@ -125,11 +125,11 @@ block content
     .container
       .interior__wrapper
         // title
-        .title.wow(data-animation-delay=".2s")
+        .title(data-animation-delay=".2s")
           .title__wrapper
             span Интерьер
             
-        .interior__slider.wow(data-animation-delay=".2s")
+        .interior__slider(data-animation-delay=".2s")
           .interior__slide
             img(src='img/interiorImg_1.jpg')
           .interior__slide
@@ -146,15 +146,15 @@ block content
     .container
       .contact__wrapper
         // title
-        .title.title--black.wow(data-animation-delay=".2s")
+        .title.title--black(data-animation-delay=".2s")
           .title__wrapper
             span Контакты
         
         .contact__info
-          .contact__credentials.wow(data-animation-delay=".4s")
+          .contact__credentials(data-animation-delay=".4s")
             .contact__adress Оренбург, <br> ул. 9 Января, 28
             a(href="mailto:orenburg@choppers.cafe").contact__email orenburg@choppers.cafe
             a(href="tel:+73532428062").contact__phone 42-80-62
-          .contact__map.wow(data-animation-delay="1s")
+          .contact__map(data-animation-delay="1s")
             #map
       
