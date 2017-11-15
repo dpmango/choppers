@@ -1,6 +1,6 @@
 $sprite: (
 	arrow: (
-		offset-x: -362px,
+		offset-x: -469px,
 		offset-y: -195px,
 		width: 74px,
 		height: 47px,
@@ -53,8 +53,17 @@ $sprite: (
 		total-height: 539px,
 		image: '../img/sprite.png'
 	),
-	slick-fold-arrow: (
+	slick-fold-arrow-next: (
 		offset-x: -255px,
+		offset-y: -195px,
+		width: 97px,
+		height: 56px,
+		total-width: 584px,
+		total-height: 539px,
+		image: '../img/sprite.png'
+	),
+	slick-fold-arrow: (
+		offset-x: -362px,
 		offset-y: -195px,
 		width: 97px,
 		height: 56px,
@@ -144,6 +153,9 @@ $sprite: (
 	}
 	.icon-slick-arrow {
 		@include sprite(slick-arrow)
+	}
+	.icon-slick-fold-arrow-next {
+		@include sprite(slick-fold-arrow-next)
 	}
 	.icon-slick-fold-arrow {
 		@include sprite(slick-fold-arrow)

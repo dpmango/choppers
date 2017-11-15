@@ -87,7 +87,7 @@
           position: absolute
           bottom: -3px
           right: 0
-          size: 40px
+          size: 42px
           background: white
         &:hover
           filter: none
@@ -95,8 +95,19 @@
       .slick-next
         right: -5px
       .slick-prev
-        display: none
         opacity: 0
+        left: -5px
+        &::after
+          +sprite(slick-fold-arrow-next)
+        &::before
+          right: auto
+          left: 0
+
+      &[data-current-slide="2"]
+        .slick-next
+          opacity: 0
+        .slick-prev
+          opacity: 1
 
 
     &__slide

@@ -172,6 +172,10 @@ $(document).ready(function(){
     ]
   });
 
+  $('.menu__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    slick.$slider.attr('data-current-slide', nextSlide + 1)
+  });
+
   $('.interior__slider').slick({
     autoplay: false,
     dots: false,
@@ -211,25 +215,25 @@ $(document).ready(function(){
     }
   });
 
-  $('[js-popup-gallery]').magnificPopup({
-		delegate: '.insta-feed__pic',
-		type: 'image',
-		tLoading: 'Загрузка #%curr%...',
-    closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-    removalDelay: 300,
-		mainClass: 'mfp-no-margins mfp-with-zoom',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1]
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-		}
-	});
-
+  // $('[js-popup-gallery]').magnificPopup({
+	// 	delegate: '.insta-feed__pic',
+	// 	type: 'image',
+	// 	tLoading: 'Загрузка #%curr%...',
+  //   closeOnContentClick: true,
+	// 	closeBtnInside: false,
+	// 	fixedContentPos: true,
+  //   removalDelay: 300,
+	// 	mainClass: 'mfp-no-margins mfp-with-zoom',
+	// 	gallery: {
+	// 		enabled: true,
+	// 		navigateByImgClick: true,
+	// 		preload: [0,1]
+	// 	},
+	// 	image: {
+	// 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+	// 	}
+	// });
+  //
 
   ////////////
   // SCROLLMONITOR
